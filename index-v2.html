@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Julie Marlina Hasan | Educator, Trainer & Learning Designer</title>
+<meta name="description" content="English lecturer at Politeknik Port Dickson who turns classroom needs into digital learning tools, AI workshops and shared practice.">
+<meta property="og:title" content="Julie Marlina Hasan | Teach. Create. Share.">
+<meta property="og:description" content="Workshops, digital learning kits and professional sharing for educators.">
+<meta property="og:image" content="https://juliemarlina-collab.github.io/myPORTFOLIO/og-preview.png">
+<meta name="theme-color" content="#FBF5E9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBF5E9;
+  --paper-2:#F4EBD8;
+  --ink:#16213E;      /* blue-black fountain-pen ink */
+  --red:#E0322B;      /* the teacher's red pen */
+  --cobalt:#2F5BD0;
+  --sun:#F4B63A;
+  --blush:#F3BDC4;
+  --line:rgba(22,33,62,.18);
+  --display:"Gloock", Georgia, "Times New Roman", serif;
+  --body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --hand:"Kalam", "Comic Sans MS", cursive;
+  --wrap:min(1180px, 100% - 2.5rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+.wrap{width:var(--wrap);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.6rem 1rem;z-index:99}
+.skip:focus{left:1rem;top:1rem}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:1rem;height:64px}
+.logo{font:400 1.6rem/1 var(--display);text-decoration:none}
+.logo b{color:var(--red);font-weight:400}
+.nav-links{display:none;gap:1.5rem;margin-left:auto;font-weight:500;font-size:.95rem}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--red)}
+.nav-cta{margin-left:auto;display:flex;gap:.5rem;align-items:center}
+.lang{font:500 .8rem var(--mono);text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:.35rem .7rem}
+@media (min-width:900px){.nav-links{display:flex}.nav-cta{margin-left:1.5rem}}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:600 .95rem/1 var(--body);text-decoration:none;border-radius:99px;padding:.95rem 1.4rem;border:2px solid var(--ink);transition:transform .15s ease, background .15s ease;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);border-color:var(--red);color:#fff}
+.btn-red:hover{background:#c52720}
+.btn-ghost{background:transparent}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-sm{padding:.6rem 1rem;font-size:.85rem}
+
+/* ---------- red pen annotations (the signature) ---------- */
+.pen{position:relative;display:inline-block;white-space:nowrap}
+.pen svg{position:absolute;pointer-events:none;overflow:visible}
+.pen.circle svg{inset:-22% -10%;width:120%;height:144%}
+.pen.under svg{left:-2%;bottom:-.28em;width:104%;height:.5em}
+.pen path{fill:none;stroke:var(--red);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;
+  stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.1s cubic-bezier(.6,.05,.3,1)}
+.pen.drawn path{stroke-dashoffset:0}
+.note{font:700 1.15rem/1.15 var(--hand);color:var(--red);transform:rotate(-4deg);display:inline-block}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:2.5rem 0 1rem}
+.hero .wrap{display:grid;gap:1.5rem;align-items:center}
+.hello{font:400 clamp(5rem,20vw,11rem)/.85 var(--display);color:var(--red);margin:0;letter-spacing:-.02em}
+.hero h1{font:400 clamp(1.9rem,5vw,3rem)/1.05 var(--display);margin:.6rem 0 1rem}
+.hero p.lede{font-size:1.15rem;max-width:34ch;margin:0 0 1.6rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.figure{position:relative;aspect-ratio:4/5;max-width:480px;width:100%;justify-self:center}
+.figure .disc{position:absolute;left:8%;right:8%;top:14%;aspect-ratio:1;border-radius:50%;background:var(--blush)}
+.figure .arc{position:absolute;inset:4% -6% auto auto;width:62%;aspect-ratio:1;border-radius:50%;border:2px solid var(--cobalt);clip-path:inset(0 0 50% 0)}
+.figure .sun{position:absolute;left:0;top:10%;width:18%;aspect-ratio:1;color:var(--sun)}
+.figure img{position:absolute;inset:auto 0 0 0;margin-inline:auto;height:100%;width:auto;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(22,33,62,.18))}
+.figure .note{position:absolute;right:-2%;top:28%;max-width:9ch;text-align:center}
+.figure .note svg{display:block;width:60px;height:40px;margin:.2rem auto 0;transform:rotate(20deg)}
+.figure .note path{fill:none;stroke:var(--red);stroke-width:2.5;stroke-linecap:round}
+@media (min-width:900px){
+  .hero{padding:4rem 0 2rem}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;gap:3rem}
+}
+/* page-load sequence: the one orchestrated moment */
+@media (prefers-reduced-motion:no-preference){
+  .hello,.hero h1,.hero .lede,.hero .actions,.figure img{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero h1{animation-delay:.12s}.hero .lede{animation-delay:.22s}.hero .actions{animation-delay:.32s}.figure img{animation-delay:.1s}
+  .figure .disc{transform:scale(.6);opacity:0;animation:pop .9s cubic-bezier(.3,1.4,.4,1) forwards}
+  .figure .sun{animation:spin 18s linear infinite}
+}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes pop{to{opacity:1;transform:scale(1)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- partner marquee ---------- */
+.marquee{border-block:2px solid var(--ink);background:var(--sun);overflow:hidden;margin-top:2rem}
+.track{display:flex;width:max-content;gap:2.5rem;padding:.85rem 0;font:400 1.35rem/1 var(--display);white-space:nowrap}
+.track span::after{content:"✦";margin-left:2.5rem;color:var(--red)}
+@media (prefers-reduced-motion:no-preference){.track{animation:slide 32s linear infinite}}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- section heads ---------- */
+section{padding:4.5rem 0}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:2.5rem}
+.head h2{font:400 clamp(2.4rem,7vw,4.2rem)/.95 var(--display);margin:0;color:var(--red)}
+.head p{max-width:38ch;margin:0}
+
+/* ---------- chapters (Behance-style spreads) ---------- */
+.chapter{display:grid;gap:1.75rem;padding:2.5rem 0;border-top:1px solid var(--line);position:relative}
+.chapter:last-child{border-bottom:1px solid var(--line)}
+.num{font:400 clamp(3.5rem,11vw,6rem)/.8 var(--display);margin:0}
+.chapter h3{font:400 clamp(2rem,5.5vw,3rem)/1 var(--display);color:var(--red);margin:.6rem 0 .9rem}
+.pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1.1rem;padding:0;list-style:none}
+.pills li{font:500 .75rem/1 var(--mono);border:1.5px solid var(--ink);border-radius:99px;padding:.4rem .7rem .4rem .55rem}
+.pills li::before{content:"✦ "}
+.story{max-width:52ch;margin:0 0 1.2rem}
+.facts{display:grid;gap:.9rem;margin:0 0 1.4rem;padding-top:1rem;border-top:1px solid var(--line)}
+.facts dt{font:500 .75rem/1 var(--mono);margin-bottom:.3rem;color:rgba(22,33,62,.7)}
+.facts dd{margin:0;font-weight:500}
+.links{display:flex;flex-wrap:wrap;gap:.6rem}
+.year{font:500 .8rem var(--mono);display:block;margin-top:.4rem}
+
+.art{position:relative;border-radius:22px;border:2px solid var(--ink);min-height:280px;overflow:hidden;display:grid;place-items:center;padding:1.5rem}
+.art-ai{background:var(--cobalt);color:var(--paper)}
+.art-ai .big{font:400 clamp(6rem,20vw,10rem)/1 var(--display)}
+.art-ai .ring{position:absolute;width:62%;aspect-ratio:1.3;border:3px solid var(--sun);border-radius:50%;transform:rotate(-8deg)}
+.art-muet{background:var(--paper-2);grid-template-columns:1fr 1fr;gap:.75rem;place-items:stretch}
+.art-muet div{border-radius:14px;border:2px solid var(--ink);display:flex;flex-direction:column;justify-content:space-between;padding:.9rem;min-height:110px;font:400 1.5rem/1 var(--display)}
+.art-muet div small{font:500 .7rem var(--mono)}
+.art-muet div:nth-child(1){background:var(--red);color:#fff}
+.art-muet div:nth-child(2){background:var(--sun)}
+.art-muet div:nth-child(3){background:var(--blush)}
+.art-muet div:nth-child(4){background:var(--cobalt);color:#fff}
+.art-dt{background:var(--sun)}
+.art-dt ol{list-style:none;margin:0;padding:0;display:grid;gap:.8rem;width:100%;max-width:320px}
+.art-dt li{background:var(--paper);border:2px solid var(--ink);border-radius:99px;padding:.8rem 1.2rem;font:400 1.5rem/1 var(--display);display:flex;justify-content:space-between}
+.art-dt li:nth-child(2){margin-left:12%}.art-dt li:nth-child(3){margin-left:24%}
+.art-dt li span{font:500 .75rem var(--mono);align-self:center}
+.art-kit{background:var(--blush)}
+.art-kit .win{width:100%;max-width:340px;background:var(--paper);border:2px solid var(--ink);border-radius:14px;overflow:hidden}
+.art-kit .bar{display:flex;gap:.35rem;padding:.6rem .8rem;border-bottom:2px solid var(--ink);background:var(--paper-2)}
+.art-kit .bar i{width:10px;height:10px;border-radius:50%;background:var(--ink)}
+.art-kit .bar i:nth-child(1){background:var(--red)}.art-kit .bar i:nth-child(2){background:var(--sun)}
+.art-kit .row{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-bottom:1px solid var(--line);font:400 1.35rem/1 var(--display)}
+.art-kit .row:last-child{border:0}
+.art-kit .row b{font:500 .75rem var(--mono);background:var(--ink);color:var(--paper);border-radius:99px;padding:.3rem .55rem}
+
+@media (min-width:900px){
+  .chapter{grid-template-columns:130px 1fr 1.05fr;gap:2.5rem;align-items:start}
+  .chapter:nth-child(even) .art{order:-1}
+  .chapter:nth-child(even){grid-template-columns:130px 1.05fr 1fr}
+  .chapter:nth-child(even) .num{order:-2}
+  .facts{grid-template-columns:1fr 1fr}
+}
+
+/* ---------- numbers band ---------- */
+.band{background:var(--ink);color:var(--paper)}
+.band .head h2{color:var(--paper)}
+.stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(251,245,233,.25)}
+.stat{padding:1.6rem 1rem 1.6rem 0;border-bottom:1px solid rgba(251,245,233,.25)}
+.stat:nth-child(odd){border-right:1px solid rgba(251,245,233,.25)}
+.stat:nth-child(even){padding-left:1.2rem}
+.stat strong{display:block;font:400 clamp(3rem,10vw,5rem)/1 var(--display);color:var(--sun)}
+.stat span{display:block;max-width:22ch;margin-top:.4rem;font-size:.95rem}
+@media (min-width:900px){.stats{grid-template-columns:repeat(4,1fr)}.stat{padding:2rem 1.5rem!important;border-right:1px solid rgba(251,245,233,.25)}.stat:last-child{border-right:0}}
+
+/* ---------- work with me (tabs) ---------- */
+.tabs{display:flex;gap:.4rem;overflow-x:auto;padding-bottom:.4rem;margin-bottom:1.5rem;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{font:400 1.5rem/1 var(--display);background:none;border:2px solid transparent;border-radius:99px;padding:.6rem 1.2rem;color:var(--ink);cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--red);color:#fff;border-color:var(--red)}
+.tab:not([aria-selected="true"]):hover{border-color:var(--ink)}
+.panel{display:grid;gap:1.5rem;border:2px solid var(--ink);border-radius:22px;padding:1.75rem;background:#fff}
+.panel[hidden]{display:none}
+.panel h3{font:400 clamp(1.8rem,5vw,2.6rem)/1 var(--display);margin:0 0 .8rem}
+.panel p{margin:0 0 1.2rem;max-width:48ch}
+.panel ul.for{margin:0 0 1.4rem;padding-left:1.1rem}
+.panel ul.for li{margin:.25rem 0}
+.panel .side{background:var(--paper-2);border-radius:16px;padding:1.25rem;align-self:start}
+.panel .side h4{font:500 .75rem var(--mono);margin:0 0 .8rem}
+@media (min-width:900px){.panel{grid-template-columns:1.4fr 1fr;padding:2.5rem}}
+@media (prefers-reduced-motion:no-preference){.panel:not([hidden]){animation:rise .45s cubic-bezier(.2,.7,.2,1)}}
+
+/* ---------- sharing carousel ---------- */
+.rail{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.5rem .5rem 2rem;margin-inline:-.5rem;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.card{scroll-snap-align:center;flex:0 0 min(80%,340px);min-height:330px;border:2px solid var(--ink);border-radius:22px;padding:1.4rem;display:flex;flex-direction:column;text-decoration:none;transition:transform .25s ease}
+.card:nth-child(4n+1){background:var(--red);color:#fff;transform:rotate(-2deg)}
+.card:nth-child(4n+2){background:var(--sun);transform:rotate(1.5deg)}
+.card:nth-child(4n+3){background:var(--cobalt);color:#fff;transform:rotate(-1deg)}
+.card:nth-child(4n+4){background:var(--blush);transform:rotate(2deg)}
+.card:hover,.card:focus-visible{transform:rotate(0) translateY(-6px)}
+.card .when{font:500 .75rem var(--mono);display:flex;justify-content:space-between;gap:.5rem}
+.card .lvl{border:1.5px solid currentColor;border-radius:99px;padding:.2rem .55rem}
+.card h3{font:400 1.9rem/1.02 var(--display);margin:auto 0 .8rem}
+.card p{margin:0;font-size:.95rem}
+.rail-hint{font:700 1.1rem var(--hand);color:var(--red);margin:0}
+
+/* ---------- assessor strip ---------- */
+.assess{border:2px dashed var(--ink);border-radius:22px;padding:1.6rem;display:grid;gap:1rem;align-items:center}
+.assess h2{font:400 1.8rem/1.05 var(--display);margin:0}
+.assess p{margin:.3rem 0 0}
+@media (min-width:900px){.assess{grid-template-columns:1fr auto}}
+
+/* ---------- footer ---------- */
+footer{background:var(--paper-2);border-top:2px solid var(--ink);padding:4rem 0 2rem}
+.thanks{font:400 clamp(4rem,16vw,9rem)/.85 var(--display);color:var(--red);margin:0}
+.thanks + p{font:400 clamp(1.5rem,4vw,2.2rem)/1.1 var(--display);margin:.8rem 0 2rem}
+.contact{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:3rem}
+.small{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font:500 .8rem var(--mono);border-top:1px solid var(--line);padding-top:1.2rem}
+.small a{text-decoration:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Julie<b>.</b></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#hire">Work with me</a>
+      <a href="#sharing">Sharing</a>
+      <a href="en/folio/index.html">Folio DH13</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="lang" href="index-ms.html" lang="ms">BM</a>
+      <a class="btn btn-red btn-sm" href="#contact">Book me</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="hi">
+  <div class="wrap">
+    <div>
+      <p class="hello" aria-hidden="true">Hello!</p>
+      <h1 id="hi">I'm Julie Marlina, an English lecturer who turns classroom needs into <span class="pen under" data-pen><span>tools, workshops</span><svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 6 C 20 2, 45 9, 60 5 S 88 3, 98 6"/></svg></span> and shared practice.</h1>
+      <p class="lede">23 years teaching Communicative English and MUET at Politeknik Port Dickson. Now I help educators teach with AI, design thinking and digital tools.</p>
+      <div class="actions">
+        <a class="btn btn-red" href="#hire">Book a workshop</a>
+        <a class="btn btn-ghost" href="#work">See my work</a>
+      </div>
+    </div>
+    <div class="figure">
+      <div class="disc"></div>
+      <div class="arc"></div>
+      <svg class="sun" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" d="M50 0 C54 36 64 46 100 50 C64 54 54 64 50 100 C46 64 36 54 0 50 C36 46 46 36 50 0Z"/></svg>
+      <!-- same image file as your current site -->
+      <img src="julie-full-body.png" alt="Julie Marlina Hasan in a cream suit and pink hijab" width="1121" height="1403">
+      <span class="note">23+ years in the classroom
+        <svg viewBox="0 0 60 40" aria-hidden="true"><path d="M50 4 C 40 20, 25 28, 6 34 M6 34 l10 -1 M6 34 l5 -8"/></svg>
+      </span>
+    </div>
+  </div>
+
+  <div class="marquee" aria-label="Organisations I have worked with">
+    <div class="track">
+      <span>Politeknik Port Dickson</span><span>UIN Sultanah Nahrasiyah Lhokseumawe</span><span>JPPKK</span><span>POLYCC Future-Ready AI Series</span><span>SOLS Foundation</span><span>CAMP21</span>
+      <span aria-hidden="true">Politeknik Port Dickson</span><span aria-hidden="true">UIN Sultanah Nahrasiyah Lhokseumawe</span><span aria-hidden="true">JPPKK</span><span aria-hidden="true">POLYCC Future-Ready AI Series</span><span aria-hidden="true">SOLS Foundation</span><span aria-hidden="true">CAMP21</span>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTERS -->
+<section id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="work-h">The story so far</h2>
+      <p>Four chapters since 2024. Each one started with a problem I saw in class or in a staff room.</p>
+    </div>
+
+    <article class="chapter">
+      <p class="num">01.<span class="year">2024</span></p>
+      <div>
+        <h3>Future Proof with AI</h3>
+        <ul class="pills"><li>AI skills</li><li>Collaboration</li><li>Strategy</li></ul>
+        <p class="story">POLIPD and SOLS Foundation wanted people ready for AI at work, not just curious about it. I helped shape the programme's strategy so the training stayed practical and grounded in how people actually learn.</p>
+        <dl class="facts">
+          <div><dt>My role</dt><dd>Deputy Strategic Director</dd></div>
+          <div><dt>What came of it</dt><dd>A POLIPD and SOLS partnership linking AI skills training with teaching practice</dd></div>
+        </dl>
+      </div>
+      <div class="art art-ai" aria-hidden="true"><div class="ring"></div><span class="big">AI</span></div>
+    </article>
+
+    <article class="chapter">
+      <p class="num">02.<span class="year">2025 to 2026</span></p>
+      <div>
+        <h3>Smart MUET Guide</h3>
+        <ul class="pills"><li>Digital learning</li><li>MUET</li><li>App design</li></ul>
+        <p class="story">Years of MUET classes showed me the same gap: students practised the four skills in scattered places. Version 1 proved the idea. Version 2 brings Listening, Speaking, Reading and Writing into one guide they can return to at their own pace.</p>
+        <dl class="facts">
+          <div><dt>My role</dt><dd>Project lead, with Angela and Nurfarizah</dd></div>
+          <div><dt>What came of it</dt><dd>A working four-skill app, now in lecturer review before student testing</dd></div>
+        </dl>
+        <div class="links">
+          <a class="btn btn-red btn-sm" href="https://juliemarlina-collab.github.io/Smart-MUET-v2/">Open the app</a>
+          <a class="btn btn-ghost btn-sm" href="stories/smart-muet.html">Read the story</a>
+        </div>
+      </div>
+      <div class="art art-muet" aria-hidden="true">
+        <div><small>01</small>Listen</div><div><small>02</small>Speak</div><div><small>03</small>Read</div><div><small>04</small>Write</div>
+      </div>
+    </article>
+
+    <article class="chapter">
+      <p class="num">03.<span class="year">2026</span></p>
+      <div>
+        <h3>Smart DT</h3>
+        <ul class="pills"><li>Design thinking</li><li>Learning design</li></ul>
+        <p class="story">Design thinking sticks when students feel it, not when they read about it. Smart DT turns explore, ideate and test into a guided experience for purposeful classroom projects.</p>
+        <dl class="facts">
+          <div><dt>My role</dt><dd>Learning experience designer</dd></div>
+          <div><dt>What came of it</dt><dd>A guided design thinking journey lecturers can run with their own classes</dd></div>
+        </dl>
+        <div class="links"><a class="btn btn-ghost btn-sm" href="stories/smart-dt.html">Read the story</a></div>
+      </div>
+      <div class="art art-dt" aria-hidden="true">
+        <ol><li>Explore <span>01</span></li><li>Ideate <span>02</span></li><li>Test <span>03</span></li></ol>
+      </div>
+    </article>
+
+    <article class="chapter">
+      <p class="num">04.<span class="year">Aug 2026</span></p>
+      <div>
+        <h3>Gemini Notebook Web Kit</h3>
+        <ul class="pills"><li>AI for teaching</li><li>Web kit</li><li>Training</li></ul>
+        <p class="story">Lecturers kept asking how to build teaching materials with AI without losing accuracy. I built an interactive kit that walks them through sourcing, creating and verifying with Gemini, then taught it live.</p>
+        <dl class="facts">
+          <div><dt>My role</dt><dd>Panel speaker and kit developer</dd></div>
+          <div><dt>What came of it</dt><dd>Streamed on EDUTV@POLYCC to 96+ live viewers; the kit stays open for lecturers to use</dd></div>
+        </dl>
+        <div class="links"><a class="btn btn-ghost btn-sm" href="stories/gemini-webinar.html">Read the story</a></div>
+      </div>
+      <div class="art art-kit" aria-hidden="true">
+        <div class="win"><div class="bar"><i></i><i></i><i></i></div>
+          <div class="row"><b>1</b>Source</div><div class="row"><b>2</b>Create</div><div class="row"><b>3</b>Verify</div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="band" aria-labelledby="num-h">
+  <div class="wrap">
+    <div class="head"><h2 id="num-h">Julie in numbers</h2></div>
+    <div class="stats">
+      <div class="stat"><strong data-count="23" data-suffix="+">23+</strong><span>years teaching English and MUET</span></div>
+      <div class="stat"><strong data-count="2">2</strong><span>countries where I've shared practice</span></div>
+      <div class="stat"><strong data-count="96" data-suffix="+">96+</strong><span>live viewers at one national AI webinar</span></div>
+      <div class="stat"><strong data-count="4">4</strong><span>days leading speakers at CAMP21</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK WITH ME -->
+<section id="hire" aria-labelledby="hire-h">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="hire-h">Work with me</h2>
+      <p>For polytechnics, schools, universities and training teams who want learning that people can use the next day.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Ways to work together">
+      <button class="tab" role="tab" id="t-train" aria-controls="p-train" aria-selected="true">Train</button>
+      <button class="tab" role="tab" id="t-build" aria-controls="p-build" aria-selected="false" tabindex="-1">Build</button>
+      <button class="tab" role="tab" id="t-lead" aria-controls="p-lead" aria-selected="false" tabindex="-1">Lead</button>
+      <button class="tab" role="tab" id="t-share" aria-controls="p-share" aria-selected="false" tabindex="-1">Share</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-train" aria-labelledby="t-train">
+      <div>
+        <h3>AI for lecturers</h3>
+        <p>Hands-on sessions where lecturers leave with materials they built themselves: notes, activities and short videos made with Gemini and creative AI tools, checked for accuracy.</p>
+        <ul class="for"><li>Gemini Notebook for teaching materials</li><li>Creative AI video, from storyboard to prompt</li><li>Using AI responsibly in assessment</li></ul>
+        <a class="btn btn-red" href="#contact">Ask about a workshop</a>
+      </div>
+      <div class="side"><h4>Formats</h4><ul class="pills"><li>Talk</li><li>Half-day</li><li>Full-day hands-on</li><li>Online</li></ul></div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-build" aria-labelledby="t-build" hidden>
+      <div>
+        <h3>Digital learning kits</h3>
+        <p>Web apps and interactive kits that turn a course need into something students and lecturers can open on any phone, like Smart MUET Guide and the Gemini web kit.</p>
+        <ul class="for"><li>Course companion web apps</li><li>Interactive training kits for workshops</li><li>Event and competition websites</li></ul>
+        <a class="btn btn-red" href="#contact">Talk about a kit</a>
+      </div>
+      <div class="side"><h4>Built with</h4><ul class="pills"><li>HTML, CSS, JS</li><li>GitHub Pages</li><li>Apps Script</li><li>AI integration</li></ul></div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-lead" aria-labelledby="t-lead" hidden>
+      <div>
+        <h3>Programmes and speakers</h3>
+        <p>I coordinate the people side of learning events: speaker line-ups, session flow and the details that make a programme run on time.</p>
+        <ul class="for"><li>Head of Speakers, CAMP21: Synergizing Literacies</li><li>Course coordination and intensive MUET programmes</li><li>Programme strategy with industry partners</li></ul>
+        <a class="btn btn-red" href="#contact">Plan a programme</a>
+      </div>
+      <div class="side"><h4>Good fit for</h4><ul class="pills"><li>Conferences</li><li>Colloquiums</li><li>Staff development</li></ul></div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p-share" aria-labelledby="t-share" hidden>
+      <div>
+        <h3>Talks on teaching practice</h3>
+        <p>Keynotes and sharing sessions on what works in the classroom, drawn from real projects at Politeknik Port Dickson.</p>
+        <ul class="for"><li>PBL and PjBL in practice</li><li>Design thinking for purposeful learning</li><li>MUET preparation that builds all four skills</li></ul>
+        <a class="btn btn-red" href="#contact">Invite me to speak</a>
+      </div>
+      <div class="side"><h4>Languages</h4><ul class="pills"><li>English</li><li>Bahasa Melayu</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- SHARING -->
+<section id="sharing" aria-labelledby="share-h" style="padding-top:1rem">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="share-h">On stage and on screen</h2>
+      <p class="rail-hint" aria-hidden="true">swipe for more ✦</p>
+    </div>
+    <div class="rail">
+      <a class="card" href="stories/uin-sharing.html">
+        <div class="when"><span>15 Jan 2026</span><span class="lvl">International</span></div>
+        <h3>PBL and PjBL: innovative learning models</h3>
+        <p>Keynote speaker, UIN Sultanah Nahrasiyah Lhokseumawe, Indonesia.</p>
+      </a>
+      <a class="card" href="stories/camp21.html">
+        <div class="when"><span>13 to 16 Jul 2026</span><span class="lvl">National</span></div>
+        <h3>CAMP21: Synergizing Literacies</h3>
+        <p>Head of Speakers at Kuala Lumpur Craft Complex.</p>
+      </a>
+      <a class="card" href="stories/gemini-webinar.html">
+        <div class="when"><span>26 Aug 2026</span><span class="lvl">National</span></div>
+        <h3>TVET NextGen: Gemini for teaching</h3>
+        <p>Panel speaker, POLYCC Future-Ready AI Series by JPPKK.</p>
+      </a>
+      <a class="card" href="stories/video-kreatif-ai.html">
+        <div class="when"><span>2026</span><span class="lvl">Institution</span></div>
+        <h3>Video Kreatif AI</h3>
+        <p>Speaker, then technical support for the video development workshop.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ASSESSORS -->
+<section aria-labelledby="as-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="assess">
+      <div>
+        <h2 id="as-h">For assessors and referees</h2>
+        <p>The full record of my work for DH13, organised by Teras Utama, Kepimpinan, Sumbangan and Pembangunan Diri.</p>
+      </div>
+      <div class="links">
+        <a class="btn btn-ghost" href="folio/index.html" lang="ms">Folio (BM)</a>
+        <a class="btn btn-ghost" href="en/folio/index.html">Folio (EN)</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <p class="thanks" lang="ms">terima <span class="pen circle" data-pen><span>kasih!</span><svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M52 4 C 20 2, 3 18, 5 34 C 8 54, 60 60, 88 46 C 102 38, 98 12, 70 6 C 60 4, 45 5, 38 8"/></svg></span></p>
+    <p>Let's make learning happen.</p>
+    <div class="contact">
+      <!-- REPLACE: your email and LinkedIn profile URL -->
+      <a class="btn btn-red" href="mailto:your.email@example.com?subject=Workshop%20enquiry">Email me</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/your-profile/">LinkedIn</a>
+      <a class="btn btn-ghost" href="cv-julie-marlina-2026.pdf">Download CV</a>
+    </div>
+    <div class="small">
+      <span>© 2026 Julie Marlina Hasan, Politeknik Port Dickson</span>
+      <span><a href="https://github.com/juliemarlina-collab">GitHub</a> ✦ <a href="#top">Back to top</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Red pen: draw annotations when they scroll into view
+  const pens = document.querySelectorAll('[data-pen]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    pens.forEach(p => p.classList.add('drawn'));
+  } else {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('drawn'), 350); io.unobserve(e.target); }
+    }), { threshold: .6 });
+    pens.forEach(p => io.observe(p));
+  }
+
+  // Count-up numbers
+  const nums = document.querySelectorAll('[data-count]');
+  const run = el => {
+    const end = +el.dataset.count, suf = el.dataset.suffix || '', t0 = performance.now(), dur = 1200;
+    const step = t => { const k = Math.min(1, (t - t0) / dur), v = Math.round(end * (1 - Math.pow(1 - k, 3)));
+      el.textContent = v + suf; if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  };
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io2 = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { run(e.target); io2.unobserve(e.target); } }), { threshold: .5 });
+    nums.forEach(n => io2.observe(n));
+  }
+
+  // Tabs (tap + keyboard arrows)
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const select = tab => {
+    tabs.forEach(t => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    tab.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', e => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) { e.preventDefault(); const n = tabs[(i + d + tabs.length) % tabs.length]; select(n); n.focus(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
