@@ -1,0 +1,28 @@
+2023 SHARE — ASSET & EVIDENCE MANIFEST
+======================================
+
+This build intentionally develops ONLY the 2023 SHARE chapter.
+
+IMAGES TO ADD
+1. 2023 cover photo — authentic training/facilitation image.
+2. Master Trainer — training photo.
+3. Master Trainer — appointment/programme document thumbnail.
+4. Master Trainer — training material/output image.
+5. Thunkable — app/workshop screenshot.
+6. CAMP21 — authentic facilitation photograph.
+7. Optional APACC / academic-writing photographs if supported by 2023 records.
+
+EVIDENCE FOLDERS
+- Master Trainer — Micro-Credential Development Series 1 & 2
+- Thunkable Apps / PSH Lifelong Learning
+- CAMP21 — Synergizing Literacies
+- APACC
+- Academic Writing / Proofreading
+- Selected Professional Development
+
+IMPORTANT
+All evidence records in app.js are currently marked TO VERIFY.
+No invented participant numbers, ratings, impact metrics or document filenames are published.
+Connect actual files in assets/docs and update app.js only after verification.
+
+2024 is NOT developed. The 05.02.2024 screen is only a transition out of 2023.
