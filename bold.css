@@ -1,0 +1,179 @@
+/* =====================================================================
+   BOLD LAYER · Julie Marlina portfolio
+   Load LAST (after premium.css). Direction: yellow + violet-blue,
+   heavy geometric type, big rounded blocks, white breathing space.
+   Palette discipline: YELLOW + BLUE lead · ink + white support ·
+   purple / teal / pink / lime only as small accents.
+   ===================================================================== */
+:root{
+  --y:#FFCF00; --v:#323EDD; --v-deep:#2128A8; --p:#91008D;
+  --lime:#DBFF3D; --ink:#14141A; --soft:#F6F5F0; --line:#E7E6E0;
+  --r-lg:36px; --r-md:24px; --r-sm:14px;
+  --display:'Poppins',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif;
+}
+body{font-family:var(--body)!important;color:var(--ink);background:#fff}
+h1,h2,h3,h4{font-family:var(--display)!important;color:inherit}
+h1{font-weight:800!important;letter-spacing:-.045em!important;line-height:.98!important}
+h2{font-weight:800!important;letter-spacing:-.04em!important;line-height:1.02!important}
+h3{font-weight:700!important;letter-spacing:-.02em!important}
+h1 em,h2 em{font-family:var(--display)!important;font-style:normal!important;font-weight:800!important;color:var(--v)!important}
+.kicker,.eyebrow{font-family:var(--body);font-size:11px!important;font-weight:700!important;letter-spacing:.14em!important;color:var(--v)!important}
+.lead{color:#4A4A55!important}
+
+/* ---------- Buttons & links ---------- */
+.btn{background:var(--v)!important;color:#fff!important;font-family:var(--display);font-weight:700!important;padding:16px 28px!important;border-radius:999px!important;transition:transform .2s,background .2s}
+.btn:hover{background:var(--v-deep)!important;transform:translateY(-2px)}
+.btn-light{background:#fff!important;color:var(--ink)!important;box-shadow:inset 0 0 0 2px var(--ink)!important}
+.text-link{font-family:var(--display);font-weight:700;color:var(--ink)!important;border-bottom:3px solid var(--y)!important;padding-bottom:3px!important}
+.studio-actions{align-items:center;gap:22px!important}
+
+/* ---------- Navigation ---------- */
+.global-nav{height:82px!important;background:#fffffff2!important}
+.global-nav .logo{font-family:var(--display);font-weight:800!important;font-size:13px!important;letter-spacing:.02em!important}
+.global-nav .logo b{background:var(--v)!important;color:var(--y)!important;font-family:var(--display)}
+.global-nav nav a{font-family:var(--display);font-weight:600!important;color:var(--ink)!important;font-size:13px!important}
+.global-nav nav a[aria-current=page]{color:var(--v)!important;box-shadow:inset 0 -3px 0 var(--y)}
+.global-nav nav a:last-child{background:var(--y);border:0!important;padding:12px 20px!important;box-shadow:none!important}
+
+/* ---------- HERO (reference: yellow block + vertical wordmark + violet cards) ---------- */
+.editorial-hero{padding-top:56px!important;padding-bottom:70px!important;gap:56px!important}
+.editorial-hero .intro-name{font-family:var(--display);font-weight:700;font-size:15px!important;color:var(--ink)!important;margin:22px 0 10px!important}
+.editorial-hero h1{font-size:clamp(46px,5.6vw,84px)!important}
+.editorial-hero .kicker{display:inline-block;background:var(--y);color:var(--ink)!important;padding:8px 14px;border-radius:999px}
+.hero-composition{height:580px!important;margin:0!important}
+.hero-composition::before{content:'julie.';position:absolute;left:-6px;bottom:28px;z-index:4;writing-mode:vertical-rl;transform:rotate(180deg);
+  font:800 clamp(96px,10.5vw,150px)/.78 var(--display);letter-spacing:-.05em;color:#fff;text-shadow:0 2px 24px #0002;pointer-events:none}
+.hero-picture{inset:0 70px 40px 40px!important;background:var(--y)!important;border-radius:var(--r-lg)!important}
+.hero-picture img{object-position:center 30%!important}
+.hero-picture:after{inset:60% 0 0!important;background:linear-gradient(transparent,#0007)!important}
+.hero-picture figcaption{left:auto!important;right:24px!important;text-align:right;font-weight:600}
+.float-note{background:var(--v)!important;color:#fff!important;border-radius:var(--r-md)!important;width:210px!important;right:0!important;bottom:120px!important;padding:26px!important;box-shadow:0 20px 50px #323edd40!important}
+.float-note strong{font-family:var(--display);font-weight:800!important;color:var(--y);font-size:34px!important;letter-spacing:-.04em}
+.float-note small{color:#fff!important;font-weight:600}
+.hero-orbit{background:var(--v)!important;color:var(--y)!important;width:74px!important;height:74px!important;right:30px!important;top:28px!important;border:5px solid #fff;font-size:28px!important}
+.hero-index{left:auto!important;right:95px!important;top:auto!important;bottom:56px!important;background:var(--ink)!important;color:var(--y)!important;font-weight:700;letter-spacing:.08em}
+.hero-contact{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+.hero-contact a,.hero-contact span{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:13px;color:var(--ink);text-decoration:none}
+.hero-contact i{width:30px;height:30px;border-radius:50%;background:var(--v);display:grid;place-items:center;flex:none}
+.hero-contact svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:2}
+
+/* ---------- Ribbon line ---------- */
+.editorial-line{max-width:none!important;margin:0!important;padding:20px max(6vw,24px)!important;background:var(--ink);color:var(--y)!important;border:0!important;
+  font-family:var(--display);font-weight:700;font-size:12px!important;letter-spacing:.12em}
+
+/* ---------- Section rhythm ---------- */
+.editorial-section{padding-block:88px!important}
+.editorial-heading h2{font-size:clamp(36px,4.6vw,64px)!important}
+.editorial-heading p{color:#55555f!important;font-size:15px!important}
+
+/* ---------- Chapter folders: static grid, no auto-scroll ---------- */
+.folder-shelf{background:var(--v)!important;border-radius:var(--r-lg)!important;padding:42px 0 34px!important}
+.folder-shelf-head p{color:#fff!important;font-family:var(--display);font-weight:600;font-size:14px!important}
+.shelf-controls,.shelf-note{display:none!important}
+.folder-viewport{overflow:visible!important;padding:26px 30px 6px!important}
+.folder-track{width:auto!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px!important}
+.evidence-folders .folder-track{grid-template-columns:repeat(3,minmax(0,1fr))}
+.premium-folder{width:auto!important;flex:none!important;height:250px!important;border-radius:0 var(--r-md) var(--r-md) var(--r-md)!important;--folder-color:#fff!important;color:var(--ink)!important}
+.premium-folder:nth-child(odd){--folder-color:var(--y)!important}
+.premium-folder h3{font-size:30px!important;font-weight:800!important;margin:56px 0 10px!important}
+.premium-folder .folder-year{font-family:var(--display);font-weight:800;font-size:13px!important;color:var(--v)}
+.premium-folder .folder-arrow{width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--y);display:grid;place-items:center;font-size:17px!important;top:22px!important;right:20px!important}
+.premium-folder:hover{transform:translateY(-8px) rotate(-1deg)!important}
+
+/* ---------- Story cards ---------- */
+.studio-grid{gap:28px!important}
+.feature-card{background:#fff!important}
+.feature-media{border-radius:var(--r-md)!important;height:260px!important;background:var(--y)!important}
+.feature-media .type-art{font-family:var(--display)!important;font-weight:800!important;color:var(--v);letter-spacing:-.04em}
+.feature-copy h3{font-size:22px!important;line-height:1.18!important;margin:12px 0 8px!important}
+.feature-copy small{font-family:var(--display);font-weight:700;color:var(--v)!important}
+.tag{background:var(--y)!important;color:var(--ink)!important;font-weight:700!important}
+.feature-copy .kicker{color:#77778a!important}
+
+/* ---------- Collage: hide empty frames publicly ---------- */
+.collage-frame{border-radius:var(--r-md)!important}
+body:not(.editing-photos) .collage-frame.blank{display:none}
+body:not(.editing-photos) .collage-section:not(:has(.collage-frame:not(.blank))){display:none}
+body:not(.editing-photos) .collage-grid:has(.collage-frame:nth-child(4).blank) .collage-frame:is(:nth-child(2),:nth-child(3)){grid-row:span 2}
+body:not(.editing-photos) .collage-grid:has(.collage-frame:nth-child(3).blank) .collage-frame:nth-child(2){grid-column:span 2;grid-row:span 2}
+body:not(.editing-photos) .collage-grid:has(.collage-frame:nth-child(2).blank) .collage-frame:first-child{grid-column:1/-1}
+body:not(.editing-photos) .chapter-cover.blank{display:none}
+/* One collage per journey, not on every page */
+#view-work .collage-section,#view-evidence .collage-section,#view-dh13 .collage-section{display:none!important}
+
+/* ---------- Callouts ---------- */
+.quiet-callout{background:var(--v)!important;color:#fff;border-radius:var(--r-lg)!important}
+.quiet-callout h2{color:var(--y)!important}
+.quiet-callout p{color:#E6E8FF!important}
+.quiet-callout .kicker{color:#fff!important;opacity:.85}
+.quiet-callout .text-link{color:#fff!important}
+.editorial-cta{border-radius:var(--r-lg)!important;padding:72px!important;position:relative;overflow:hidden}
+.editorial-cta h2{font-size:clamp(38px,4.8vw,68px)!important}
+.editorial-cta::after{content:'';position:absolute;right:-80px;bottom:-80px;width:260px;height:260px;border-radius:50%;border:44px solid var(--v);opacity:.95}
+.editorial-cta .btn{position:relative;z-index:2;background:var(--ink)!important;color:var(--y)!important}
+
+/* ---------- Journey chapter pages ---------- */
+.journey-year-switcher{padding:16px max(6vw,24px)!important;gap:10px!important}
+.journey-year-switcher a{font-family:var(--display);font-weight:700!important;font-size:12px!important;padding:10px 16px!important;border-radius:999px!important;background:var(--soft)!important;color:var(--ink)!important;border:0!important}
+.journey-year-switcher a.active{background:var(--v)!important;color:var(--y)!important}
+.year-preamble h1{font-size:clamp(46px,5.6vw,82px)!important}
+.year-number{display:inline-block;font-family:var(--display);font-weight:800!important;font-size:clamp(90px,11vw,160px)!important;color:var(--ink)!important;letter-spacing:-.06em!important;line-height:.9;background:linear-gradient(transparent 58%,var(--y) 58% 92%,transparent 92%);padding-right:.08em}
+.year-context{font-family:var(--display);font-weight:700;color:var(--v)!important;font-size:13px!important}
+.chapter-cover{border-radius:var(--r-lg)!important;background:var(--y)!important}
+.story-strip>div{background:var(--soft);border:0!important;border-radius:var(--r-md);padding:28px!important}
+.story-strip>div:nth-child(2){background:var(--y)}
+.story-strip b{font-family:var(--display);font-weight:800}
+.register-disclosure>summary,.legacy-chapter>summary,.work-disclosure summary{font-family:var(--display);font-weight:700!important;font-size:14px!important}
+.legacy-chapter{border:2px solid var(--ink)!important;border-radius:var(--r-md)!important}
+.legacy-chapter>summary{background:var(--y)}
+/* unify old Impact type inside full chapters */
+.legacy-chapter :is(.reflection-line,.fact-strip b,.folder3d b,.movement-track b,.movement-track strong,.mini-index,.role-callout strong,.paper-sheet h3,.milestone-date,.threshold-date-hero,.hrd-stamp,.next-chapter strong,.year-mark,.flag-number,.share-cover h1){font-family:var(--display)!important;font-weight:800!important;letter-spacing:-.04em}
+
+/* ---------- Inner pages ---------- */
+.studio-hero,.detail-hero{background:#fff!important}
+.studio-hero figure,.detail-gallery figure{border-radius:var(--r-lg)!important;background:var(--y)}
+.studio-band{background:var(--v)!important;color:#fff!important;border-radius:var(--r-lg)!important}
+.studio-band h2{color:var(--y)!important}
+.studio-band .lead,.studio-band p{color:#E6E8FF!important}
+.evidence-card{border:0!important;background:var(--soft)!important;border-radius:var(--r-md)!important}
+.evidence-card a{color:var(--v);font-weight:700}
+.detail-role{background:var(--y)!important;border-radius:var(--r-md)!important}
+.studio-table th{background:var(--v)!important;color:#fff!important;font-family:var(--display)}
+.filters button[aria-pressed=true]{background:var(--v)!important;color:var(--y)!important}
+
+/* ---------- Footer ---------- */
+.global-footer{background:var(--ink)!important;color:#cfcfd8!important;border:0!important}
+.global-footer strong{color:var(--y)!important;font-family:var(--display);font-size:14px!important}
+.global-footer a{color:#fff!important}
+.global-footer button{background:transparent!important;color:#fff!important;border:1px solid #ffffff40!important}
+.draft-toggle[aria-pressed=true]{background:var(--y)!important;color:var(--ink)!important}
+
+/* ---------- Tablet & mobile ---------- */
+@media(max-width:1100px){
+  .folder-track{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .evidence-folders .folder-track{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:1000px){
+  .editorial-hero{grid-template-columns:1fr!important}
+  .hero-composition{height:520px!important;max-width:620px}
+}
+@media(max-width:760px){
+  .hero-composition{height:440px!important}
+  .hero-composition::before{font-size:86px}
+  .hero-picture{inset:0 36px 30px 30px!important}
+  .float-note{width:160px!important;bottom:70px!important;padding:20px!important}
+  .float-note strong{font-size:25px!important}
+  .hero-index{display:none}
+  .folder-track,.evidence-folders .folder-track{grid-template-columns:1fr}
+  .premium-folder{height:200px!important}
+  .premium-folder h3{margin-top:40px!important}
+  .folder-viewport{padding:20px 18px 0!important}
+  .editorial-cta{padding:34px!important}
+  .editorial-cta::after{width:160px;height:160px;border-width:28px;right:-60px;bottom:-60px}
+  body:not(.editing-photos) .collage-grid{grid-template-columns:1fr 1fr!important;grid-template-rows:none!important;grid-auto-rows:170px}
+  body:not(.editing-photos) .collage-grid .collage-frame{grid-column:auto!important;grid-row:auto!important}
+  body:not(.editing-photos) .collage-grid .collage-frame:first-child{grid-column:1/-1!important;grid-row:span 2!important}
+}
+@media(prefers-reduced-motion:reduce){.premium-folder:hover,.btn:hover{transform:none!important}}
+/* tablet: avoid a lonely third card */
+@media(min-width:761px) and (max-width:1000px){.studio-grid>.feature-card:nth-child(3):last-child{grid-column:1/-1}.studio-grid>.feature-card:nth-child(3):last-child .feature-media{height:300px!important}}
