@@ -177,3 +177,25 @@ body:not(.editing-photos) .chapter-cover.blank{display:none}
 @media(prefers-reduced-motion:reduce){.premium-folder:hover,.btn:hover{transform:none!important}}
 /* tablet: avoid a lonely third card */
 @media(min-width:761px) and (max-width:1000px){.studio-grid>.feature-card:nth-child(3):last-child{grid-column:1/-1}.studio-grid>.feature-card:nth-child(3):last-child .feature-media{height:300px!important}}
+/* nav: no wrapping; compact on small laptops; menu button on tablets */
+.global-nav nav a{white-space:nowrap}
+@media(max-width:1240px){.global-nav nav{gap:16px!important}.global-nav nav a{font-size:12px!important}.global-nav nav a:last-child{padding:11px 14px!important}.global-nav .logo{font-size:0!important}.global-nav .logo b{font-size:12px}}
+@media(max-width:1060px){
+  .global-nav .menu-toggle{display:block!important;background:#fff;border:1px solid var(--line);border-radius:20px;font:600 12px var(--display);padding:9px 15px}
+  .global-nav>nav{display:none!important;position:absolute;top:82px;left:0;right:0;background:#fff;padding:18px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:6px!important;margin:0!important;max-width:none!important;overflow:visible!important}
+  .global-nav>nav.is-open{display:flex!important}
+  .global-nav>nav a{font-size:15px!important;padding:12px 0!important}
+  .global-nav>nav a:last-child{text-align:center;margin-top:8px}
+  .global-nav .logo{font-size:13px!important}
+}
+
+/* ===== Public view: hide owner tools and unverified legacy sections ===== */
+body:not(.show-drafts) .collage-toolbar{display:none!important}
+body:not(.show-drafts) .legacy-chapter[data-year="2025"]{display:none!important}
+body:not(.show-drafts) :is(#more,#institutional,.uinsu-callout,.agro-card,.micro-note,.camp-identity small,.service-card:nth-child(2)){display:none!important}
+body:not(.show-drafts) :is(.folder3d[data-folder=respex],.folder3d[data-folder=service],.folder3d[data-folder=leadership-service],.movement-track [data-jump=more],.movement-track [data-scroll=institutional],.subnav [data-scroll=institutional]){display:none!important}
+body:not(.show-drafts) .movement-track.five{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1050px){body:not(.show-drafts) .movement-track.five{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){body:not(.show-drafts) .movement-track.five{grid-template-columns:1fr}}
+.owner-badge{position:fixed;left:16px;bottom:16px;z-index:200;background:var(--ink);color:var(--y);font:700 12px var(--display);padding:10px 16px;border-radius:999px;text-decoration:none;box-shadow:0 6px 20px #0003}
+.owner-note{background:#fff7d1;border-radius:var(--r-md)}

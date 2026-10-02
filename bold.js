@@ -19,7 +19,7 @@ h1{line-height:.92!important}h2{line-height:.98!important}
 .recognition{background:#FFCF00!important}.end{background:#323EDD!important}
 .role{border-left-color:#FFCF00!important}
 `;
-const DRAFT_HIDE=`.status,.note,.photo-hint,.notice{display:none!important}`;
+const DRAFT_HIDE=`.status,.note,.photo-hint,.notice,#evidence,[data-jump=evidence],.slot{display:none!important}`;
 
 function styleShadows(showDrafts){
   for(const id of ['chapter-2025','chapter-2026']){
@@ -39,16 +39,12 @@ function heroContact(){
 }
 
 function draftToggle(){
-  const footer=document.querySelector('.global-footer'); if(!footer||footer.querySelector('.draft-toggle')) return;
-  const b=document.createElement('button');
-  b.className='draft-toggle photo-settings'; b.type='button'; b.setAttribute('aria-pressed','false');
-  b.textContent='Show working notes';
-  b.onclick=()=>{const on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(on));
-    b.textContent=on?'Hide working notes':'Show working notes';
-    document.body.classList.toggle('show-drafts',on);styleShadows(on);};
-  (footer.querySelector('.collage-toolbar')||footer).prepend(b);
+  /* Owner mode (?edit=1) shows a small badge; visitors never see working tools */
+  if(!window.JM_EDIT||document.querySelector('.owner-badge'))return;
+  const a=document.createElement('a');a.className='owner-badge';a.href='?edit=0'+location.hash;
+  a.textContent='Owner mode · drafts & notes visible — exit';document.body.append(a);
 }
-
-function run(){heroContact();draftToggle();styleShadows(document.body.classList.contains('show-drafts'));}
+function folioLink(){const nav=document.getElementById('main-nav');if(!nav||nav.querySelector('.folio-link'))return;const a=document.createElement('a');a.href='folio-dh13.html';a.className='folio-link';a.textContent='Folio DH13';nav.lastElementChild.before(a);}
+function run(){folioLink();heroContact();draftToggle();styleShadows(document.body.classList.contains('show-drafts'));}
 document.addEventListener('DOMContentLoaded',()=>{run();addEventListener('hashchange',()=>setTimeout(run,30));});
 })();

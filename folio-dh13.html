@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Folio DH13 · Julie Marlina</title>
+<meta name="description" content="DH13 promotion folio of Julie Marlina binti Hasan: five major criteria with supporting evidence.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap">
+<style>
+:root{--y:#FFCF00;--v:#323EDD;--p:#91008D;--pink:#FF3483;--teal:#00E0BA;--lime:#DBFF3D;--ink:#14141A;--paper:#F6F5F0;--line:#ffffff1f;
+--ease:cubic-bezier(.22,1,.36,1);--slow:1.4s;--display:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:#fff;font-family:var(--body);line-height:1.6;overflow-x:clip}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.045em;margin:0}
+.kicker{font:700 11px/1.4 var(--body);letter-spacing:.18em;text-transform:uppercase}
+
+/* ---------- top bar ---------- */
+.top{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px max(5vw,20px);mix-blend-mode:normal;transition:background .6s var(--ease)}
+.top.solid{background:#14141Aee;backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 13px var(--display)}
+.brand b{width:36px;height:36px;border-radius:50%;background:var(--y);color:var(--ink);display:grid;place-items:center;font-size:12px}
+.top nav{display:flex;gap:10px}
+.top nav a{font:600 12px var(--display);text-decoration:none;padding:10px 16px;border-radius:999px;border:1px solid #ffffff40}
+.top nav a.fill{background:var(--y);color:var(--ink);border-color:var(--y)}
+
+/* ---------- landing ---------- */
+.landing{min-height:100vh;padding:120px max(5vw,20px) 60px;display:grid;grid-template-columns:.9fr 1.1fr;gap:5vw;align-items:center}
+.hello .kicker{color:var(--y)}
+.hello h1{font-size:clamp(52px,6.6vw,104px);line-height:.92;margin:22px 0 26px}
+.hello h1 span{display:block;overflow:hidden}
+.hello h1 span i{display:block;font-style:normal;transform:translateY(105%);animation:rise 1.6s var(--ease) forwards}
+.hello h1 span:nth-child(2) i{animation-delay:.18s;color:var(--y)}
+.hello h1 span:nth-child(3) i{animation-delay:.36s}
+.hello p{color:#c9c9d4;max-width:440px;font-size:16px;opacity:0;animation:fade 1.6s var(--ease) .7s forwards}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;opacity:0;animation:fade 1.6s var(--ease) .9s forwards}
+.badges span{font:600 12px var(--display);padding:9px 14px;border-radius:999px;background:#ffffff12;border:1px solid var(--line)}
+.badges span:first-child{background:var(--y);color:var(--ink);border-color:var(--y)}
+
+/* animated table of contents — stacked colour bars */
+.toc{display:flex;flex-direction:column;gap:10px}
+.toc-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;color:#9d9daa;opacity:0;animation:fade 1.2s var(--ease) .3s forwards}
+.bar{--c:var(--v);--t:#fff;position:relative;display:grid;grid-template-columns:62px 1fr auto;align-items:center;gap:14px;
+  min-height:88px;padding:16px 26px 16px 22px;background:var(--c);color:var(--t);text-decoration:none;border-radius:6px;overflow:hidden;
+  transform:translateX(110%);opacity:0;animation:slideIn 1.5s var(--ease) forwards;transition:min-height .9s var(--ease),border-radius .9s var(--ease)}
+.bar:nth-child(2){animation-delay:.25s}.bar:nth-child(3){animation-delay:.45s}.bar:nth-child(4){animation-delay:.65s}.bar:nth-child(5){animation-delay:.85s}.bar:nth-child(6){animation-delay:1.05s}
+.bar .n{font:800 15px var(--display);opacity:.7}
+.bar strong{display:block;font:800 clamp(22px,2.6vw,38px)/1 var(--display);letter-spacing:-.04em;text-transform:uppercase}
+.bar small{display:block;font:600 12px var(--body);margin-top:6px;opacity:.8;max-height:0;overflow:hidden;transition:max-height .9s var(--ease),opacity .9s}
+.bar svg{width:46px;height:20px;stroke:currentColor;stroke-width:2.2;fill:none;transition:transform .9s var(--ease)}
+.bar::after{content:'';position:absolute;inset:0;background:#fff;opacity:0;transition:opacity .6s}
+.bar:hover,.bar:focus-visible{min-height:118px;border-radius:22px}
+.bar:hover small,.bar:focus-visible small{max-height:40px}
+.bar:hover svg,.bar:focus-visible svg{transform:translateX(8px)}
+.bar:hover::after{opacity:.06}
+.bar:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
+.scroll-cue{margin-top:24px;font:600 12px var(--display);color:#9d9daa;display:flex;align-items:center;gap:10px;opacity:0;animation:fade 1.2s var(--ease) 1.6s forwards}
+.scroll-cue i{width:1px;height:36px;background:linear-gradient(var(--y),transparent);animation:drip 2.6s var(--ease) infinite}
+
+/* ---------- facts ---------- */
+.facts{background:var(--paper);color:var(--ink);padding:110px max(5vw,20px);border-radius:40px 40px 0 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:46px}
+.section-head .kicker{color:var(--v)}
+.section-head h2{font-size:clamp(40px,5.2vw,78px);line-height:.96;margin-top:14px}
+.section-head p{max-width:360px;color:#55555f;margin:0}
+.fact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fact{background:#fff;border-radius:26px;padding:30px 26px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between}
+.fact.big{grid-column:span 2;background:var(--v);color:#fff}
+.fact.yel{background:var(--y)}
+.fact .num{font:800 clamp(54px,6vw,92px)/.9 var(--display);letter-spacing:-.06em}
+.fact.big .num{color:var(--y)}
+.fact h3{font-size:18px;letter-spacing:-.02em;margin-top:18px}
+.fact p{font-size:13px;margin:6px 0 0;opacity:.75}
+.ribbon{margin-top:16px;overflow:hidden;background:var(--ink);color:var(--y);border-radius:26px;padding:22px 0}
+.ribbon div{display:flex;gap:42px;width:max-content;animation:marquee 60s linear infinite;font:700 14px var(--display);letter-spacing:.06em;text-transform:uppercase}
+.ribbon:hover div{animation-play-state:paused}
+
+/* ---------- criteria — stacked sticky cards ---------- */
+.criteria{background:var(--paper);color:var(--ink);padding:0 max(5vw,20px) 120px}
+.stack{position:relative}
+.card{--c:var(--v);--t:#fff;position:sticky;top:calc(96px + var(--i) * 18px);min-height:calc(100vh - 150px);margin-bottom:40px;
+  background:var(--c);color:var(--t);border-radius:36px;padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:1fr 1.05fr;gap:4vw;
+  transform-origin:50% 0;box-shadow:0 -10px 40px #14141a22;will-change:transform}
+.card .idx{font:800 clamp(90px,12vw,190px)/.8 var(--display);letter-spacing:-.07em;opacity:.95}
+.card .kicker{opacity:.8;margin-top:28px}
+.card h2{font-size:clamp(34px,4.2vw,64px);line-height:.98;margin:12px 0 10px}
+.card .en{font:600 15px var(--display);opacity:.75;margin:0}
+.card .look{margin-top:28px;padding-top:20px;border-top:1px solid currentColor;border-color:color-mix(in srgb,currentColor 25%,transparent)}
+.card .look p{font-size:14px;margin:8px 0 0;opacity:.85;max-width:430px}
+.card .stat{display:inline-flex;align-items:baseline;gap:10px;margin-top:22px;background:color-mix(in srgb,var(--t) 12%,transparent);padding:12px 18px;border-radius:999px;font:700 13px var(--display)}
+.card .stat b{font-size:26px;letter-spacing:-.04em}
+.items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;align-self:center}
+.items li{background:color-mix(in srgb,var(--t) 9%,transparent);border-radius:18px;padding:16px 18px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;
+  opacity:0;transform:translateY(24px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
+.card.in .items li{opacity:1;transform:none}
+.card.in .items li:nth-child(2){transition-delay:.12s}.card.in .items li:nth-child(3){transition-delay:.24s}.card.in .items li:nth-child(4){transition-delay:.36s}.card.in .items li:nth-child(5){transition-delay:.48s}.card.in .items li:nth-child(6){transition-delay:.6s}
+.items .yr{font:800 12px var(--display);padding:6px 10px;border-radius:999px;background:var(--t);color:var(--c);white-space:nowrap}
+.items strong{display:block;font:700 15px/1.3 var(--display);letter-spacing:-.01em}
+.items span.r{display:block;font-size:12.5px;opacity:.8;margin-top:2px}
+.items a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--t);color:var(--c);text-decoration:none;font-weight:800;transition:transform .6s var(--ease)}
+.items a:hover{transform:rotate(-45deg)}
+.items li.pending{background:transparent;border:1.5px dashed color-mix(in srgb,var(--t) 45%,transparent)}
+.items li.pending .yr{background:transparent;color:var(--t);border:1px solid currentColor}
+.items .pre{font:700 10px var(--body);letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin-left:6px}
+
+/* side dots */
+.dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:10px;opacity:0;transition:opacity .8s}
+.dots.show{opacity:1}
+.dots a{width:12px;height:12px;border-radius:50%;background:#14141a33;transition:transform .6s var(--ease),background .6s}
+.dots a.on{background:var(--v);transform:scale(1.5)}
+
+/* ---------- close ---------- */
+.close{background:var(--y);color:var(--ink);padding:110px max(5vw,20px);text-align:center}
+.close h2{font-size:clamp(44px,7vw,110px);line-height:.92}
+.close p{max-width:560px;margin:22px auto 30px;color:#3b3b44}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btns a{font:700 14px var(--display);text-decoration:none;padding:16px 26px;border-radius:999px;background:var(--ink);color:var(--y)}
+.btns a.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+footer{padding:28px max(5vw,20px);font-size:12px;color:#9d9daa;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 1.4s var(--ease),transform 1.4s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+@keyframes rise{to{transform:none}}
+@keyframes fade{to{opacity:1}}
+@keyframes slideIn{to{transform:none;opacity:1}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+@media(max-width:1000px){
+  .landing{grid-template-columns:1fr;padding-top:110px}
+  .fact-grid{grid-template-columns:repeat(2,1fr)}
+  .card{grid-template-columns:1fr;min-height:0;top:calc(80px + var(--i) * 12px)}
+  .section-head{display:block}.section-head p{margin-top:16px}
+}
+@media(max-width:600px){
+  .top nav a:not(.fill){display:none}
+  .bar{grid-template-columns:40px 1fr auto;min-height:74px;padding:14px 18px}
+  .bar svg{width:32px}
+  .fact-grid{grid-template-columns:1fr}.fact.big{grid-column:auto}
+  .fact{min-height:180px}
+  .card{border-radius:26px;position:relative;top:auto}
+  .items li{grid-template-columns:1fr auto}.items .yr{grid-column:1/-1;justify-self:start}
+  .dots{display:none}
+  .facts{border-radius:26px 26px 0 0}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important;scroll-behavior:auto!important}
+  .card{transform:none!important}
+}
+</style>
+</head>
+<body>
+<header class="top" id="top">
+  <a class="brand" href="index.html#/home"><b>JM</b> JULIE MARLINA.</a>
+  <nav><a href="index.html#/journey">My Journey</a><a href="index.html#/evidence">Evidence</a><a class="fill" href="#kriteria">5 Criteria ↓</a></nav>
+</header>
+
+<main>
+<section class="landing">
+  <div class="hello">
+    <p class="kicker">Promotion Folio · DH12 → DH13 · 2027</p>
+    <h1><span><i>Julie</i></span><span><i>Marlina</i></span><span><i>binti Hasan.</i></span></h1>
+    <p>Senior Lecturer, English Language Unit, General Studies Department, Politeknik Port Dickson. Educator, trainer and digital learning builder.</p>
+    <div class="badges"><span>Category I(a)</span><span>DH12 since 05.02.2024</span><span>HRD Corp Accredited Trainer</span></div>
+  </div>
+  <div>
+    <div class="toc-head"><span class="kicker">Contents</span><span class="kicker">06</span></div>
+    <nav class="toc" id="toc" aria-label="Folio contents"></nav>
+    <div class="scroll-cue"><i></i><span>Scroll slowly to explore</span></div>
+  </div>
+</section>
+
+<section class="facts" id="fakta">
+  <div class="section-head reveal">
+    <div><p class="kicker">00 · At a glance</p><h2>Me, at a<br>glance.</h2></div>
+    <p>Key figures and achievements, each backed by evidence records in this portfolio.</p>
+  </div>
+  <div class="fact-grid">
+    <div class="fact big reveal"><div class="num" data-count="23" data-suffix="+">0</div><div><h3>Years in education</h3><p>Communicative English, MUET preparation and educator development.</p></div></div>
+    <div class="fact yel reveal"><div class="num" data-count="42">0</div><div><h3>Lecturers trained</h3><p>Master Trainer, PPD Micro-Credential Platform, 2023.</p></div></div>
+    <div class="fact reveal"><div class="num" data-count="18">0</div><div><h3>Course platforms</h3><p>Developed with expert panels, 2023.</p></div></div>
+    <div class="fact reveal"><div class="num" data-count="30">0</div><div><h3>KAFA teachers trained</h3><p>Thunkable app course with JHEAINS, 2023.</p></div></div>
+    <div class="fact reveal"><div class="num" data-count="2">0</div><div><h3>International study visits</h3><p>Organiser, CPSC study visits, 2024.</p></div></div>
+    <div class="fact yel reveal"><div class="num" data-count="17" data-suffix="+">0</div><div><h3>Appointments & roles, 2026</h3><p>APACC, UKKP, Strategic Management, SOLS–PPD, CAMP21 and more.</p></div></div>
+    <div class="fact reveal"><div class="num">1</div><div><h3>Published proceedings paper</h3><p>AIJR Proceedings, 2023 · DOI 10.21467/proceedings.151.49</p></div></div>
+  </div>
+  <div class="ribbon reveal" aria-hidden="true"><div id="ribbon"></div></div>
+</section>
+
+<section class="criteria" id="kriteria">
+  <div class="section-head reveal" style="padding-top:20px">
+    <div><p class="kicker">Five major criteria</p><h2>Evidence that<br>builds the path.</h2></div>
+    <p>Organised by the expertise assessment aspects of the PPPT Promotion Guidelines (Candidate Edition, Version 4).</p>
+  </div>
+  <div class="stack" id="stack"></div>
+</section>
+
+<section class="close">
+  <p class="kicker">The path ahead</p>
+  <h2 class="reveal">Teach. Build.<br>Lead. Contribute.</h2>
+  <p>Every item links to its original evidence. Full records are in the Evidence archive.</p>
+  <div class="btns"><a href="index.html#/evidence">Evidence archive ↗</a><a class="alt" href="index.html#/journey">Follow my journey →</a></div>
+</section>
+</main>
+<footer><span>© Julie Marlina binti Hasan · Politeknik Port Dickson</span><a href="mailto:juliemarlina@polipd.edu.my">juliemarlina@polipd.edu.my</a></footer>
+<nav class="dots" id="dots" aria-label="Criteria"></nav>
+
+<script>
+/* ======================================================================
+   EDIT HERE — the five criteria and their evidence.
+   pending:true  → dashed "to complete" item (delete or fill before submission)
+   pre:true      → before current grade (05.02.2024); shown as progression only
+   ====================================================================== */
+const D='https://drive.google.com/file/d/';
+const CRITERIA=[
+ {id:'pdp',en:'Teaching & Learning',bm:'Pengajaran & Pembelajaran',c:'#323EDD',t:'#fff',
+  look:'Core Duties · Curriculum & Co-curriculum: teaching quality, course coordination, classroom observation and student supervision.',
+  stat:['16+','teaching hours a week · Category I(a)'],
+  items:[
+   {y:'2026',h:'Course Coordinator, DUE50132',r:'Communicative English 3',u:D+'105uK2_x5BK5JdmhiqSxf1XODnB4pcR1M/view'},
+   {y:'2026',h:'TESL Subject Matter Expert Panel',r:'Communicative English 2 curriculum',u:D+'105uK2_x5BK5JdmhiqSxf1XODnB4pcR1M/view'},
+   {y:'2026',h:'Industrial Training Monitoring Lecturer',r:'Session II 2025/2026, Phase 1',u:D+'1zEqkZT3IMVTa2pj9SmvbcMy_pNDu0U5k/view'},
+   {y:'—',h:'Observation & course CQI records',r:'Add observation and CQI reports',pending:true}]},
+ {id:'rdci',en:'Innovation, Research & Publication',bm:'Inovasi, Penyelidikan & Penerbitan',c:'#FFCF00',t:'#14141A',
+  look:'Core Duties · RDCI: teaching innovation, research in the prescribed format, writing and presentations within the current grade.',
+  stat:['V2','Smart MUET Guide'],
+  items:[
+   {y:'2026',h:'Smart MUET Guide V2',r:'Project Leader / Principal Research Officer',u:D+'1JB6MvSUzXvDz8NVeJ-7DdNMgIlfv7eOQ/view'},
+   {y:'2026',h:'JPA Researcher 2026–2027',r:'Departmental researcher appointment',u:D+'1ZouVCIgIlIOprSZRegXIRL3YiT1tCRlL/view'},
+   {y:'2026',h:'POLYCC Future-Ready AI Series',r:'Panel speaker · Gemini App & Notebook',u:D+'1ZSke0_1gE7JwYOFyWhs8CjcHokixEtVy/view'},
+   {y:'2023',h:'Community Involvement in an English Classroom',r:'AIJR Proceedings · co-author',u:D+'168LMbuHp8_GsQfjmURPfJ4Uux4vMcRxS/view',pre:true}]},
+ {id:'lead',en:'Leadership',bm:'Kepimpinan',c:'#91008D',t:'#fff',
+  look:'Lampiran 1A-2: leadership towards the Strategic Plan, research and publication committees, academic coordination, coaching and personal conduct. Each item is mapped to my SKU 2026.',
+  stat:['25%','of expertise score at DH12'],
+  items:[
+   {y:'2026',h:'Secretary, APACC Criterion C7',r:'Item 1 · SKU 1.3 · Feb 2026 · Institutional',u:D+'1Zc9Fugv9gbSCQvU1MaK539PukIhTS7ZP/view'},
+   {y:'2026',h:'Data & Information Secretariat (Head)',r:'Item 1 · PPD Strategic Management · Mar 2026 · Institutional',u:D+'1JC80gKUuGHlh1LLRF-IAwIM2fySmp6H0/view'},
+   {y:'2026',h:'Lead researcher, Smart MUET Guide V2',r:'Item 2 · SKU 2.2 · Sep 2026 · Departmental',u:D+'1JB6MvSUzXvDz8NVeJ-7DdNMgIlfv7eOQ/view'},
+   {y:'2025',h:'Committee member, JPPKK language review',r:'Item 3 · Language specialism · Dec 2025 · National',u:D+'1uzZJ2ow2bWIF7RzwWPjiIXRN2f7-0fuB/view'},
+   {y:'2026',h:'Head, JPA eLearning Committee',r:'Item 4a · SKU 2.1 · 2026 · Departmental',u:D+'1RsVmzyfcowXvW87AmbAGMbh_jnMDcodL/view'},
+   {y:'2026',h:'Secretary, UKKP',r:'Item 4a · SKU 3.4 · Apr 2026 · Institutional',u:D+'13CX9xlMDB4bU3omAhJ0_438gCIYGaTka/view'},
+   {y:'—',h:'Coaching: 5 coachees, 15 sessions (eSiS)',r:'Item 6 · SKU 4.2 · compulsory for DH12',pending:true}]},
+ {id:'diri',en:'Professional Development',bm:'Pembangunan Diri',c:'#00E0BA',t:'#14141A',
+  look:'Mandatory criteria (PPK, CPCM) and electives: professional qualifications, skills certificates and awards.',
+  stat:['2027','HRD Corp valid until'],
+  items:[
+   {y:'2024',h:'HRD Corp Accredited Trainer',r:'Trainer ID 18374 · 23.12.2024–23.12.2027',u:D+'12krkXkySUIw6JIQs150xNxLGpF-DNXXq/view'},
+   {y:'2024',h:'Acting appointment, DH48 / DH12',r:'Effective 05.02.2024',u:D+'1oHmhd-BWbfhTsbBtIVq7WixTifh5uBIZ/view'},
+   {y:'—',h:'Skills Enhancement Programme (PPK)',r:'Add PPK records for the current grade',pending:true},
+   {y:'—',h:'Career Path Competency Matrix (CPCM)',r:'Add CPCM records for the current grade',pending:true}]},
+ {id:'sumb',en:'Contribution & Service',bm:'Sumbangan',c:'#FF3483',t:'#14141A',
+  look:'Service to the institution, department and ministry, and to local communities, external agencies and the nation.',
+  stat:['3','levels: institutional · national · international'],
+  items:[
+   {y:'2024',h:'Organiser, CPSC × TESDA study visit',r:'International · 17–20 Sep 2024',u:D+'1dB1TgUAiFEi300llWH1OSAVsPcxfY_fJ/view'},
+   {y:'2024',h:'Trainer, Panasonic System Networks',r:'Analytical & Creative Thinking · 2 days',u:D+'1Rj71vICUodzdLtbH0HNIu0eSArVGZkCt/view'},
+   {y:'2026',h:'Graphic Designer, BIPD micro-credentials',r:'JPPKK · national level',u:D+'1qX5g8f_h38yabIdoqjoP1QMX0r2P7JQq/view'},
+   {y:'2026',h:'Head of Speakers, CAMP21',r:'Synergizing Literacies · 13–16 July',u:D+'1Lp8rILk-OmuM8J-VuEBPLRWAPTu-Jr1f/view'},
+   {y:'2026',h:'Strategic Deputy Programme Director',r:'SOLS–PPD Future-Proof with AI',u:D+'1h53iqN1c_GsvW-2X5uLBgkqdIc5IsYgM/view'},
+   {y:'2026',h:'Volunteer, CSR Acheh',r:'Mission of Compassionate Nusantara',u:D+'1NRz2jK_Es9spskh-vNQXu-rdT9u2-4tW/view'}]}
+];
+const RIBBON=['Master Trainer','HRD Corp Accredited Trainer','Head, JPA eLearning','Project Leader, Smart MUET V2','CPSC Organiser','Head of Speakers, CAMP21','Secretary, UKKP','Course Coordinator, DUE50132'];
+
+/* ---------- render ---------- */
+let EDIT=false;try{const q=new URLSearchParams(location.search).get('edit');if(q==='1')sessionStorage.setItem('jm-edit','1');if(q==='0')sessionStorage.removeItem('jm-edit');EDIT=sessionStorage.getItem('jm-edit')==='1'}catch{}
+if(!EDIT)CRITERIA.forEach(k=>k.items=k.items.filter(it=>!it.pending));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const arrow='<svg viewBox="0 0 46 20" aria-hidden="true"><path d="M0 10h43M34 1l9 9-9 9"/></svg>';
+document.getElementById('toc').innerHTML=
+ `<a class="bar" href="#fakta" style="--c:#fff;--t:#14141A"><span class="n">00</span><span><strong>At a glance</strong><small data-bm="At a glance">Fakta Ringkas</small></span>${arrow}</a>`+
+ CRITERIA.map((k,i)=>`<a class="bar" href="#${k.id}" style="--c:${k.c};--t:${k.t}"><span class="n">0${i+1}</span><span><strong>${esc(k.en)}</strong><small data-bm="${esc(k.en)}">${esc(k.bm)}</small></span>${arrow}</a>`).join('');
+document.getElementById('stack').innerHTML=CRITERIA.map((k,i)=>`
+ <article class="card" id="${k.id}" style="--c:${k.c};--t:${k.t};--i:${i}">
+  <div>
+   <div class="idx">0${i+1}</div>
+   <p class="kicker">Criterion ${i+1} of 5</p>
+   <h2>${esc(k.en)}</h2><p class="en" data-bm="${esc(k.en)}">${esc(k.bm)}</p>
+   <div class="look"><span class="kicker">What is assessed</span><p>${esc(k.look)}</p></div>
+   <div class="stat"><b>${esc(k.stat[0])}</b><span>${esc(k.stat[1])}</span></div>
+  </div>
+  <ul class="items">${k.items.map(it=>`<li class="${it.pending?'pending':''}"><span class="yr">${esc(it.y)}</span><div><strong>${esc(it.h)}${it.pre?'<span class="pre">· before current grade</span>':''}</strong><span class="r">${esc(it.r)}</span></div>${it.u?`<a href="${it.u}" target="_blank" rel="noopener" aria-label="Open evidence: ${esc(it.h)}">↗</a>`:'<span></span>'}</li>`).join('')}</ul>
+ </article>`).join('');
+document.getElementById('dots').innerHTML=CRITERIA.map(k=>`<a href="#${k.id}" aria-label="${esc(k.en)}"></a>`).join('');
+const rib=RIBBON.map(r=>`<span>${esc(r)} ✦</span>`).join('');document.getElementById('ribbon').innerHTML=rib+rib;
+
+/* ---------- motion ---------- */
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');
+  const n=e.target.querySelector('[data-count]');if(n&&!n.dataset.done){n.dataset.done=1;countUp(n)}io.unobserve(e.target)}}),{threshold:.2});
+document.querySelectorAll('.reveal,.card').forEach(el=>io.observe(el));
+function countUp(el){const end=+el.dataset.count,suf=el.dataset.suffix||'';if(reduced){el.textContent=end+suf;return}
+  const t0=performance.now(),dur=2200;(function f(t){const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,4);el.textContent=Math.round(end*e)+(p===1?suf:'');if(p<1)requestAnimationFrame(f)})(t0)}
+
+const cards=[...document.querySelectorAll('.card')],dots=[...document.querySelectorAll('.dots a')],topBar=document.getElementById('top'),dotNav=document.getElementById('dots');
+function onScroll(){
+  topBar.classList.toggle('solid',scrollY>40);
+  const stackBox=document.getElementById('stack').getBoundingClientRect();
+  dotNav.classList.toggle('show',stackBox.top<innerHeight*.5&&stackBox.bottom>innerHeight*.5);
+  let active=0;
+  cards.forEach((c,i)=>{const r=c.getBoundingClientRect();if(r.top<innerHeight*.55)active=i;
+    if(reduced||innerWidth<=600){c.style.transform='';return}
+    const next=cards[i+1];if(!next){c.style.transform='';return}
+    const nr=next.getBoundingClientRect(),start=innerHeight,end=parseFloat(getComputedStyle(next).top);
+    const p=Math.min(1,Math.max(0,(start-nr.top)/(start-end)));
+    c.style.transform=`scale(${1-p*.06})`;c.style.filter=`brightness(${1-p*.18})`;});
+  dots.forEach((d,i)=>d.classList.toggle('on',i===active));
+}
+addEventListener('scroll',()=>requestAnimationFrame(onScroll),{passive:true});onScroll();
+</script>
+<script src="i18n.js"></script>
+</body>
+</html>

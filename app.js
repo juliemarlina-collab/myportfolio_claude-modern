@@ -58,6 +58,7 @@ const drawer=document.getElementById("drawer"),drawerTitle=document.getElementBy
 function openFolder(folder){
   let rows=RECORDS.filter(r=>r.folder===folder);
   if(folder==="service") rows=RECORDS.filter(r=>["ukkp","rakan-muda","csr"].includes(r.folder));
+  if(!window.JM_EDIT) rows=rows.filter(r=>!r.draft);
   drawerTitle.textContent=(folder||"EVIDENCE").replaceAll("-"," ").toUpperCase();
   drawerBody.innerHTML=rows.length?rows.map(r=>`<div class="drawer-record"><span class="status ${r.status.includes("VERIFIED")?"verified":""}">${r.status}</span>${r.isDH12?`<span class="badge-lime">DH12 CURRENT-GRADE PERIOD</span>`:""}<h4>${r.title}</h4><p><strong>Year:</strong> ${r.year||"2023"}</p><p><strong>Evidence type:</strong> ${r.type}</p><p><strong>Role:</strong> ${r.role}</p><p>${r.note}</p>${r.url?`<a class="btn" target="_blank" rel="noopener" href="${r.url}">Open source in Google Drive →</a>`:`<div class="drawer-placeholder">The visual evidence is embedded in this page.</div>`}</div>`).join(""):`<p>No connected record in this folder yet.</p>`;
   drawer.showModal();
